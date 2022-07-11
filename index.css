@@ -1,0 +1,138 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0
+}  
+
+img{
+    max-width: 100%;
+    display: block;
+ }
+    
+body{
+    max-width: 375px;
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    background-image: url("bg-intro-mobile.png");
+    background-color: hsl(0, 100%, 74%) ;
+    margin: auto;
+    text-align: center;
+}
+
+/* Typography and Styling */
+
+h1{
+    font-weight: 600;
+    font-size: 2rem;
+}
+
+h4{
+    font-weight: 400;
+    font-size: 1.14rem;
+}
+
+
+.opening, h5{
+    color: white;
+}
+
+h5{
+    font-weight: 400;
+}
+
+span{
+    font-weight: 600;
+}
+
+/* Box Shadow */
+
+.shadow{
+    box-shadow: 0px 7.5px rgba(0, 0, 0, 0.24);
+}
+
+    /* Mobile Format */
+
+/* Header */
+
+h1{
+    margin-top: 2.5em;
+}
+
+h4{
+    margin-top: 1em;
+}
+
+
+/* Free Trial Info */
+
+.card-info{
+    margin: auto;
+    margin-top: 3em;
+    max-width: 325px;
+    background-color: hsl(248, 32%, 49%) ;
+    padding: 1.1em;
+    border-radius: 1em;
+}
+
+/* Signup Form */
+
+
+#freeTrial{
+    background-color: white;
+    max-width: 325px;
+    margin: auto;
+    margin-top: 1.5em;
+    border-radius: 1em;
+    margin-bottom: 2em;
+}
+
+.form-width{
+    margin-top: 1.3em;
+    font-weight: 600;
+    padding: 1em;
+    width: 280px;
+    border: 0.8px solid hsl(246, 25%, 77%);
+    border-radius: 0.5em;
+}
+
+.form-width:hover, .form-width:focus{
+    outline-color: hsl(249, 10%, 26%);
+}
+
+#claim-button{
+    background-color: hsl(154, 59%, 51%);
+    color: white;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    border: 1px solid hsl(154, 59%, 51%);
+    box-shadow: 0px 3px hsl(154, 59%, 48%);
+    margin-bottom: 1.3em;
+}
+
+#claim-button:hover, #claim-button:focus{
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+h6{
+    color: hsl(246, 25%, 77%);
+    font-weight: 300;
+    font-size: 0.6rem;
+    max-width: 240px;
+    margin: auto;
+    padding-bottom: 2em;
+}
+
+.terms-info{
+    color: hsl(0, 100%, 74%) ;
+}
+
+/* Form Error Messages */
+
+.testing{
+    position: relative;
+}
+
+.error{
+    position: absolute;
+}
