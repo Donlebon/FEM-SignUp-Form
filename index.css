@@ -40,7 +40,7 @@ h5{
     font-weight: 400;
 }
 
-span{
+.free{
     font-weight: 600;
 }
 
@@ -68,11 +68,17 @@ h4{
 .card-info{
     margin: auto;
     margin-top: 3em;
-    max-width: 325px;
     background-color: hsl(248, 32%, 49%) ;
-    padding: 1.1em;
+    padding: 1.1em 2.5em 1.1em 2.5em;
     border-radius: 1em;
+    max-width: 325px;
 }
+
+.price{
+    display: block;
+}
+
+
 
 /* Signup Form */
 
@@ -129,10 +135,72 @@ h6{
 
 /* Form Error Messages */
 
-.testing{
-    position: relative;
-}
+/* Desktop Format */
 
-.error{
-    position: absolute;
+@media(min-width: 800px){
+    body{
+        max-width: 1280px;
+    }
+    .container{
+        display: flex;
+        align-items: center;
+    }
+
+    /* Title and Summary */
+    .opening{
+        flex-basis: 50%;
+        margin-left: 9em;
+    }
+
+    .header, .summary{
+        text-align: left;
+    }
+
+    .summary{
+        padding-bottom: 6em;
+    }
+
+    .header{
+        max-width: 425px;
+        font-size: 3rem;
+        line-height: 1.1;
+    }
+    
+    .summary{
+        font-size: 1rem;
+    }
+    
+
+    /* Card */
+
+    .card{
+        flex-basis: 50%;
+    }
+
+    .card-info, #freeTrial{
+        max-width: 400px;
+    }
+
+    #freeTrial{
+        padding-bottom: 0.7em;
+    }
+
+    .form-width{
+        width: 340px;
+    }
+
+    .form-top{
+        margin-top: 2.5em;
+    }
+  
+    .price{
+        display: inline-block;
+    }
+
+    h6{
+        max-width: 350px;
+    }
+
+    
+
 }
