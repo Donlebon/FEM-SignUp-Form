@@ -44,6 +44,10 @@ h5{
     font-weight: 600;
 }
 
+.price{
+    opacity: 0.8;
+}
+
 /* Box Shadow */
 
 .shadow{
@@ -78,7 +82,21 @@ h4{
     display: block;
 }
 
+.input-container{
+    position: relative;
+}
 
+
+.error{
+    display: inline-block;
+    position: absolute;
+    right: 35px;
+    top: 27px;
+}
+
+.warning{
+    padding: 0;
+}
 
 /* Signup Form */
 
@@ -130,7 +148,8 @@ h6{
 }
 
 .terms-info{
-    color: hsl(0, 100%, 74%) ;
+    color: hsl(0, 100%, 74%);
+    font-weight: 700;
 }
 
 /* Form Error Messages */
@@ -140,6 +159,7 @@ h6{
 @media(min-width: 800px){
     body{
         max-width: 1280px;
+        padding-top: 2.5em;
     }
     .container{
         display: flex;
@@ -175,6 +195,7 @@ h6{
 
     .card{
         flex-basis: 50%;
+        margin-right: 5em;
     }
 
     .card-info, #freeTrial{
@@ -201,6 +222,27 @@ h6{
         max-width: 350px;
     }
 
+    /* Card error */
+
+    .error{
+    right: 43px;
+    }
+
+    .error-firstname{
+        top: 43px;
+    }
+    
+    .error-lastname{
+        top: 27px;
+    }
+    
+    .error-email{
+        top: 27px;
+    }
+    
+    .error-password{
+        top: 27px;
+    }
     
 
 }

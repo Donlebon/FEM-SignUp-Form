@@ -26,36 +26,66 @@
 
 <div class = "card">
 
-<h5 class = "card-info shadow"> <span class = "free">Try it free 7 days </span> <span class = "price">then
+  <h5 class = "card-info shadow"> <span class = "free">Try it free 7 days </span> <span class = "price">then
    $20/mo. thereafter</span></h5>
 
   <form id="freeTrial" class = "shadow">
 
+      <div class = "input-container">
 
-    <input type="text" placeholder = "First Name" class = "form-width form-top">
+        <input type="text" placeholder = "First Name" class = "form-width form-top">
 
+        <img src="icon-error.svg" alt="" class = "error error-firstname">
 
-    <br>
+        <h6 class = "warning warning-firstname">First Name cannot be empty</h6>
 
-    <input type="text" placeholder = "Last Name" class = "form-width">
+      </div>
 
-    <br>
+      <br>
 
-    <input type="email" placeholder = "Email Address" class = "form-width">
+      <div class = "input-container">
 
-    <br>
+        <input type="text" placeholder = "Last Name" class = "form-width">
 
-    <input type="password" placeholder = "Password" class = "form-width">
+        <img src="icon-error.svg" alt="" class = "error error-lastname">
 
-    <br>
+        <h6 class = "warning warning-lastname">Last Name cannot be empty</h6>
 
-    <button id = "claim-button" class = "form-width shadow">CLAIM YOUR FREE TRIAL</button>
+      </div>
 
-    <h6>By clicking the button, you are agreeing to our <span class = "terms-info">Terms and Services</span></h6>
+      <br>
+      
+      <div class = "input-container">
 
-  </form>
-  
-</div>
+        <input type="email" placeholder = "Email Address" class = "form-width">
+
+        <img src="icon-error.svg" alt="" class = "error error-email">
+
+        <h6 class = "warning warning-email">Looks like this is not an email</h6>
+
+      </div>
+
+      <br>
+      
+      <div class = "input-container">
+      
+        <input type="password" placeholder = "Password" class = "form-width">
+
+        <img src="icon-error.svg" alt="" class = "error error-password">
+
+        <h6 class = "warning warning-email">Password cannot be empty</h6>
+
+      </div>
+
+      <br>
+
+        <button id = "claim-button" class = "form-width shadow">CLAIM YOUR FREE TRIAL</button>
+
+        <h6>By clicking the button, you are agreeing to our <span class = "terms-info">Terms and Services</span></h6>
+
+    </form>
+    
+  </div>
 
 </div>
 
