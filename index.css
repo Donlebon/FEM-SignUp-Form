@@ -90,6 +90,9 @@ h4{
     position: relative;
 }
 
+input:focus::placeholder {
+    color: transparent;
+}
 
 .error{
     display: inline-block;
@@ -103,6 +106,7 @@ h4{
     height: 0;
     margin-left: 14.5em;
     margin-top: 0.3em;
+    color: red;
 }
 
 /* Signup Form */
@@ -118,6 +122,7 @@ h4{
 
 .form-width{
     margin-top: 0.5em;
+    margin-bottom: 0.8em;
     font-weight: 600;
     padding: 1em;
     width: 280px;
@@ -141,9 +146,12 @@ h4{
     border: 1px solid hsl(154, 59%, 51%);
     box-shadow: 0px 3px hsl(154, 59%, 48%);
     margin-bottom: 1.3em;
+    padding: 1.3em 1em 1em 1em;
+    border-radius: 0.5em;
+    width: 280px;
 }
 
-#claim-button:hover, #claim-button:focus{
+#claim-button:hover{
     cursor: pointer;
     opacity: 0.8;
 }
@@ -185,7 +193,7 @@ h6{
 @media(min-width: 850px){
     body{
         max-width: 1280px;
-        padding-top: 2.5em;
+        padding-top: 1.5em;
     }
     .container{
         display: flex;
@@ -232,7 +240,7 @@ h6{
         padding-bottom: 0.7em;
     }
 
-    .form-width{
+    #claim-button, .form-width{
         width: 340px;
     }
 
@@ -291,3 +299,16 @@ h6{
     }
 
 }
+
+/* Error Animation */
+
+.original{
+    opacity: 1;
+}
+
+.repeat{
+    opacity: 0.5;
+    transition: 250ms;
+}
+
+/* Warning Positioning */
