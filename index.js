@@ -26,20 +26,20 @@ let pw = document.querySelector(".pw")
 
 let claimButton = document.querySelector("#claim-button")
 
-// Email Check
-
-let testing = function emailIsValid (email) {
-    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
-}
 
 claimButton.addEventListener("click", function(e){
     e.preventDefault()
     generateError()
-    addWarning()
+    addFirstWarning()
+    addLastWarning()
+    addPwWarning()
+    addEmailWarning()
 })
 
+let mistake = false
 
 function generateError(){
+    if (!mistake){
     for (let i = 0; i < 4; i++){
         let error = document.createElement("img")
         error.src = "icon-error.svg"
@@ -66,9 +66,14 @@ function generateError(){
             allInputs[i].style.outlineColor = "red"
         }
     }
+    mistake = true
+}
 }
 
-function addWarning(){
+let firstWarn = false
+
+function addFirstWarning(){
+    if (!firstWarn){
     for (let i = 0; i < 4; i++){
         let newWarning = document.createElement("h6")
         newWarning.classList.add("warning")
@@ -78,6 +83,64 @@ function addWarning(){
             fn.insertAdjacentElement("afterend", newWarning)
         }
     }
+    firstWarn = true
+}
 }
 
-// <!-- <h6 class = "warning warning-firstname">First Name cannot be empty</h6> -->
+let lastWarn = false
+
+function addLastWarning(){
+    if (!lastWarn){
+    for (let i = 0; i < 4; i++){
+        let newWarning = document.createElement("h6")
+        newWarning.classList.add("warning")
+        if (allInputs[i].contains(ln) & (ln.value == "")){
+            newWarning.classList.add("warning-lastName")
+            newWarning.textContent = "Last Name cannot be empty"
+            ln.insertAdjacentElement("afterend", newWarning)
+        }
+    }
+    lastWarn = true
+}
+}
+
+let pwWarn = false
+
+function addPwWarning(){
+    if (!pwWarn){
+    for (let i = 0; i < 4; i++){
+        let newWarning = document.createElement("h6")
+        newWarning.classList.add("warning")
+        if (allInputs[i].contains(ln) & (pw.value == "")){
+            newWarning.classList.add("warning-password")
+            newWarning.textContent = "Password cannot be empty"
+            pw.insertAdjacentElement("afterend", newWarning)
+        }
+    }
+    pwWarn = true
+}
+}
+
+// Email Check
+
+let testing = function emailIsValid (email) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
+}
+
+let emailWarning = false
+
+function addEmailWarning(){
+    if (!emailWarning){
+    for (let i = 0; i < 4; i++){
+        let newWarning = document.createElement("h6")
+        newWarning.classList.add("warning")
+        if (allInputs[i].contains(email) & !testing(email.value)){
+            newWarning.classList.add("warning-password")
+            newWarning.textContent = "Looks like this is not an email"
+            email.insertAdjacentElement("afterend", newWarning)
+        }
+    }
+    emailWarning = true
+}
+}
+
